@@ -1,3 +1,5 @@
+package lesson2;
+
 public class MySortedArrayList<Item extends Comparable<Item>> extends MyArrayList<Item> {
     public void add(Item item) {
         super.add(item);

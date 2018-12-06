@@ -1,5 +1,7 @@
+package lesson2;
+
 public class Main {
-    private final static int arraySize = 100000;
+    private final static int arraySize = 500000;
     public static void main(String[] args) {
         // Одинаковые экземпляры массивов для чистоты эксперимента
         final MyArrayList<Integer> arrayList1 = new MyArrayList<>();
