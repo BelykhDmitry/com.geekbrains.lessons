@@ -15,7 +15,11 @@ public class MyLinkedList<Item> implements Iterable<Item> {
 
         @Override
         public Item next() {
-            return null;
+            if (!hasNext())
+                throw new NoSuchElementException();
+            Item item = current.item;
+            current = current.next;
+            return item;
         }
     }
 
