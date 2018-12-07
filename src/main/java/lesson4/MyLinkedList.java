@@ -61,10 +61,11 @@ public class MyLinkedList<Item> implements Iterable<Item> {
         }
         Item item = first.item;
         first = first.next;
-        first.previous = null;
         size--;
         if (isEmpty()) {
             last = null;
+        } else {
+            first.previous = null;
         }
         return item;
     }
@@ -185,5 +186,20 @@ public class MyLinkedList<Item> implements Iterable<Item> {
         current.previous.next = newNode;
         current.previous = newNode;
         size++;
+    }
+
+    @Override
+    public String toString() {
+        if (isEmpty()) {
+            return "";
+        } else {
+            StringBuilder sb = new StringBuilder();
+            Node current = first;
+            while (current != null) {
+                sb.append(current.item.toString() + ", ");
+                current = current.next;
+            }
+            return sb.toString();
+        }
     }
 }

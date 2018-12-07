@@ -27,4 +27,9 @@ public class MyLinkedStack<Item> implements MyStack<Item> {
     public boolean isEmpty() {
         return stack.isEmpty();
     }
+
+    @Override
+    public String toString() {
+        return stack.toString();
+    }
 }

@@ -27,4 +27,9 @@ public class MyLinkedQueue<Item> implements MyQueue<Item> {
     public boolean isEmpty() {
         return queue.isEmpty();
     }
+
+    @Override
+    public String toString() {
+        return queue.toString();
+    }
 }
